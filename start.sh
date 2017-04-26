@@ -20,5 +20,17 @@ docker run --name vbox-1 --restart=always \
     -e SRV2_PW=tO3Ekz \
     -e CONF2_browserRestrictFolders="/data,/home" \
     \
+    -e SRV3_PORT_18083_TCP=192.168.168.126:18083 \
+    -e SRV3_NAME=greenbox-2 \
+    -e SRV3_USER=docker \
+    -e SRV3_PW=$DOCKER_PASSWORD \
+    -e CONF3_browserRestrictFolders="/data,/home" \
+    \
+    -e SRV4_PORT_18083_TCP=192.168.168.107:18083 \
+    -e SRV4_NAME=greenbox-5 \
+    -e SRV4_USER=docker \
+    -e SRV4_PW=$DOCKER_PASSWORD \
+    -e CONF4_browserRestrictFolders="/data,/home" \
+    \
     -e CONF_browserRestrictFolders="/data,/home" \
     -d jazzdd/phpvirtualbox
